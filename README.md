@@ -125,6 +125,8 @@ What to do next? Read the [entire guide on my blog](https://codewithmukesh.com/b
     - `dotnet dev-certs https -ep $HOME/.aspnet/https/aspnetapp.pfx -p securePassword123`
     - `dotnet dev-certs https --trust`
     - Note - Make sure that you use the same password that has been configured in the `docker-compose.yml` file. By default, `securePassword123` is configured.
+- Go to the solution directory and run the following
+    - `docker-compose -f docker-compose.yml up`
 - 5005 & 5006 are the ports setup to run blazorHero on Docker, so make sure that these ports are free. You could also change the ports in the `docker-compose.yml` and `Server\Dockerfile` files.
 - Now navigate back to the root of the BlazorHero Project on your local machine and run the following via terminal - `docker-compose -f 'docker-compose.yml' up --build`
 - This will start pulling MSSQL Server Image from Docker Hub if you don't already have this image. It's around 500+ Mbs of download.
